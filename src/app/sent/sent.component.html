@@ -1,0 +1,12 @@
+<h2>Sent</h2>
+<hr>
+<ul class="list-group">
+  <a class="list-group-item" style="cursor: pointer" *ngFor="let message of messages">
+    <!-- {{ ingredient.name }} ({{ ingredient.amount }}) -->
+    <span id="title">{{message.title}}</span>
+    <span class="pull-right"> From: {{message.sender}}</span>
+    <br>
+    <span>{{message.body}}</span>
+    <button class="btn btn-sm btn-danger pull-right" type="button" (click)="onDeleteMessage(message.id)">Delete</button>
+  </a>
+</ul>
